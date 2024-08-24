@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Run migrations and start the app
-CMD ["sh", "-c", "python manage.py db upgrade && python manage.py run"]
+CMD ["sh", "-c", "flask run"]
