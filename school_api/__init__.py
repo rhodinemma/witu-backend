@@ -37,6 +37,7 @@ def create_app():
 
     return app
 
+
 def create_admin():
     ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', 'innerman@gmail.com')
     ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'innerman_school')
@@ -70,4 +71,4 @@ def refresh():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=True)
