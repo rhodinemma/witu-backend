@@ -14,7 +14,7 @@ import os
 def create_app():
     app = Flask(__name__)
     CORS(app, supports_credentials=True, resources={
-         r"/api/*": {"origins": "http://localhost:3000"}})
+         r"/api/*": {"origins": "*"}})
 
     app.config.from_object('config.Config')
     app.config['JWT_SECRET_KEY'] = 'inner_man'
